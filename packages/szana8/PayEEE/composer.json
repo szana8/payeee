@@ -1,0 +1,42 @@
+{
+    "name": "szana8/payeee",
+    "description": "payment integration",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Istvan Szana",
+            "email": "szana8@gmail.com",
+            "homepage": "http://author.com"
+        }
+    ],
+    "homepage": "https://github.com/szana8/payeee",
+    "keywords": ["Laravel", "PayEEE"],
+    "require": {
+        "illuminate/support": "~9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "szana8\\PayEEE\\": "src/",
+            "szana8\\PayEEE\\Database\\": "database/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "szana8\\PayEEE\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "szana8\\PayEEE\\PayEEEServiceProvider"
+            ],
+            "aliases": {
+                "PayEEE": "szana8\\PayEEE\\Facades\\PayEEE"
+            }
+        }
+    }
+}

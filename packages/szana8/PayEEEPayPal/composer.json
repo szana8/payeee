@@ -1,0 +1,51 @@
+{
+    "name": "szana8/payeeepaypal",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Istvan Szana",
+            "email": "szana8@gmail.com",
+            "homepage": "http://author.com"
+        }
+    ],
+    "homepage": "https://github.com/szana8/payeeepaypal",
+    "keywords": ["Laravel", "PayEEEPayPal"],
+    "require": {
+        "illuminate/support": "~9",
+        "szana8/payeee": "@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "szana8\\PayEEEPayPal\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "szana8\\PayEEEPayPal\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "szana8\\PayEEEPayPal\\PayEEEPayPalServiceProvider"
+            ],
+            "aliases": {
+                "PayEEEPayPal": "szana8\\PayEEEPayPal\\Facades\\PayEEEPayPal"
+            }
+        }
+    },
+    "repositories": {
+        "szana8/payeee": {
+            "type": "path",
+            "url": "/Users/istvanszana/Code/payeee/packages/szana8/PayEEE",
+            "options": {
+                "symlink": true
+            }
+        }
+    }
+}
